@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Habilidades Socioemocionais</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen active">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Painel Administrativo</h1>
+                    <p>Acesso restrito para administradores</p>
+                </div>
+                
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="admin-password">Senha de Administrador</label>
+                        <div class="password-input">
+                            <input type="password" id="admin-password" placeholder="Digite a senha" required>
+                            <button type="button" id="toggle-password" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Entrar
+                    </button>
+                </form>
+                
+                <div class="login-footer">
+                    <a href="/" class="back-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Voltar ao jogo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="dashboard-screen" class="screen">
+        <header class="admin-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Painel Administrativo</h1>
+                </div>
+                <div class="header-right">
+                    <button id="refresh-btn" class="btn btn-secondary btn-small">
+                        <i class="fas fa-sync-alt"></i>
+                        Atualizar
+                    </button>
+                    <button id="logout-btn" class="btn btn-danger btn-small">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <!-- Overview Cards -->
+            <section class="overview-section">
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 id="total-rooms">0</h3>
+                            <p>Salas Ativas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 id="total-players">0</h3>
+                            <p>Jogadores Online</p>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 id="active-games">0</h3>
+                            <p>Jogos em Andamento</p>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 id="server-uptime">--:--</h3>
+                            <p>Tempo Online</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rooms Management -->
+            <section class="rooms-section">
+                <div class="section-header">
+                    <h2>Gerenciamento de Salas</h2>
+                    <div class="section-actions">
+                        <button id="create-test-room" class="btn btn-primary btn-small">
+                            <i class="fas fa-plus"></i>
+                            Criar Sala Teste
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="rooms-grid" id="rooms-grid">
+                    <!-- Salas serão carregadas aqui -->
+                </div>
+            </section>
+
+            <!-- Room Details Modal -->
+            <div id="room-modal" class="modal">
+                <div class="modal-content large">
+                    <div class="modal-header">
+                        <h3 id="room-modal-title">Detalhes da Sala</h3>
+                        <button class="modal-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="room-details-grid">
+                            <!-- Room Info -->
+                            <div class="room-info-panel">
+                                <h4>Informações da Sala</h4>
+                                <div class="info-item">
+                                    <label>Nome:</label>
+                                    <span id="room-detail-name">--</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Senha:</label>
+                                    <span id="room-detail-password">--</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Tema:</label>
+                                    <span id="room-detail-theme">--</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Status:</label>
+                                    <span id="room-detail-status">--</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Rodada:</label>
+                                    <span id="room-detail-round">--</span>
+                                </div>
+                                
+                                <div class="room-actions">
+                                    <button id="join-room-btn" class="btn btn-primary">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        Entrar na Sala
+                                    </button>
+                                    <button id="start-round-admin" class="btn btn-success">
+                                        <i class="fas fa-play"></i>
+                                        Iniciar Rodada
+                                    </button>
+                                    <button id="end-game-admin" class="btn btn-warning">
+                                        <i class="fas fa-stop"></i>
+                                        Encerrar Jogo
+                                    </button>
+                                    <button id="ban-room-btn" class="btn btn-danger">
+                                        <i class="fas fa-ban"></i>
+                                        Banir Sala
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Players List -->
+                            <div class="players-panel">
+                                <h4>Jogadores <span id="modal-player-count">0</span></h4>
+                                <div id="modal-players-list" class="players-list">
+                                    <!-- Jogadores serão carregados aqui -->
+                                </div>
+                            </div>
+                            
+                            <!-- Chat Monitor -->
+                            <div class="chat-panel">
+                                <h4>Monitor de Chat</h4>
+                                <div id="modal-chat-messages" class="chat-messages">
+                                    <!-- Mensagens serão carregadas aqui -->
+                                </div>
+                                <div class="chat-controls">
+                                    <button id="clear-chat-btn" class="btn btn-warning btn-small">
+                                        <i class="fas fa-trash"></i>
+                                        Limpar Chat
+                                    </button>
+                                    <button id="mute-chat-btn" class="btn btn-secondary btn-small">
+                                        <i class="fas fa-volume-mute"></i>
+                                        Silenciar Chat
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Game Control -->
+                            <div class="game-control-panel">
+                                <h4>Controle do Jogo</h4>
+                                
+                                <div id="round-control" class="round-control">
+                                    <div class="current-situation">
+                                        <h5>Situação Atual</h5>
+                                        <div id="current-situation-display">
+                                            Nenhuma rodada ativa
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="round-timer-display">
+                                        <h5>Cronômetro</h5>
+                                        <div id="admin-timer-display" class="timer-display">
+                                            --:--
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="scoring-control">
+                                        <h5>Validação de Pontuação</h5>
+                                        <div id="player-choices" class="player-choices">
+                                            <!-- Escolhas dos jogadores aparecerão aqui -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ban Confirmation Modal -->
+            <div id="ban-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Confirmar Banimento</h3>
+                        <button class="modal-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tem certeza que deseja banir esta sala? Esta ação não pode ser desfeita.</p>
+                        <div class="modal-actions">
+                            <button id="confirm-ban" class="btn btn-danger">
+                                <i class="fas fa-ban"></i>
+                                Confirmar Banimento
+                            </button>
+                            <button class="btn btn-secondary modal-close">
+                                Cancelar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
+

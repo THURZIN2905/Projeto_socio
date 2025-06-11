@@ -1,0 +1,113 @@
+{
+  "achievements": {
+    "primeira_vitoria": {
+      "name": "Primeira Vitória",
+      "description": "Parabéns! Você conquistou seus primeiros pontos!",
+      "icon": "fas fa-trophy",
+      "color": "#f59e0b"
+    },
+    "resposta_rapida": {
+      "name": "Resposta Relâmpago",
+      "description": "Você respondeu em menos de 10 segundos!",
+      "icon": "fas fa-bolt",
+      "color": "#06b6d4"
+    },
+    "pontuacao_alta": {
+      "name": "Pontuação Máxima",
+      "description": "Você conseguiu 20 pontos em uma rodada!",
+      "icon": "fas fa-star",
+      "color": "#10b981"
+    },
+    "rei_colaboracao": {
+      "name": "Rei da Colaboração",
+      "description": "Você demonstrou excelência em colaboração!",
+      "icon": "fas fa-handshake",
+      "color": "#8b5cf6"
+    },
+    "mestre_lideranca": {
+      "name": "Mestre da Liderança",
+      "description": "Suas habilidades de liderança são impressionantes!",
+      "icon": "fas fa-crown",
+      "color": "#f59e0b"
+    },
+    "comunicador_expert": {
+      "name": "Comunicador Expert",
+      "description": "Sua comunicação assertiva é exemplar!",
+      "icon": "fas fa-comments",
+      "color": "#ec4899"
+    },
+    "resiliente": {
+      "name": "Resiliente",
+      "description": "Você mostrou grande capacidade de superação!",
+      "icon": "fas fa-mountain",
+      "color": "#059669"
+    },
+    "empatico": {
+      "name": "Coração Empático",
+      "description": "Sua empatia faz a diferença!",
+      "icon": "fas fa-heart",
+      "color": "#dc2626"
+    },
+    "pensador_critico": {
+      "name": "Pensador Crítico",
+      "description": "Suas análises são sempre certeiras!",
+      "icon": "fas fa-brain",
+      "color": "#6366f1"
+    },
+    "adaptavel": {
+      "name": "Super Adaptável",
+      "description": "Você se adapta a qualquer situação!",
+      "icon": "fas fa-exchange-alt",
+      "color": "#14b8a6"
+    }
+  },
+  "motivational_phrases": [
+    "Errar faz parte do jogo. O que importa é tentar de novo! 💪",
+    "Você já está fazendo história. Continue! 🚀",
+    "Sua solução foi braba demais! 🔥",
+    "Cada escolha é um aprendizado! ✨",
+    "Juntos somos mais fortes! 🤝",
+    "Sua criatividade não tem limites! 🎨",
+    "Você está evoluindo a cada rodada! 📈",
+    "Sua empatia faz toda a diferença! ❤️",
+    "Continue brilhando! ⭐",
+    "Você é incrível! 🌟",
+    "Sua determinação é inspiradora! 💎",
+    "Cada desafio é uma oportunidade! 🎯",
+    "Você está no caminho certo! 🛤️",
+    "Sua energia é contagiante! ⚡",
+    "Acredite no seu potencial! 🌈",
+    "Você faz a diferença! 🌍",
+    "Sua coragem é admirável! 🦁",
+    "Continue sendo você! 🦋",
+    "Você é único e especial! 💫",
+    "Sua jornada é única! 🗺️"
+  ],
+  "ranking_phrases": {
+    "1": [
+      "O pódio é para poucos! 🥇",
+      "Você é o rei/rainha da rodada! 👑",
+      "Primeira posição merecida! 🏆",
+      "Você dominou essa rodada! 💪"
+    ],
+    "2": [
+      "Quase lá... bora destronar o líder! 🥈",
+      "Segunda posição, mas primeiro no coração! ❤️",
+      "Você está chegando lá! 🚀",
+      "Próxima rodada é sua! ⚡"
+    ],
+    "3": [
+      "Chegou perto, mas ainda tá no aquecimento! 🥉",
+      "Terceiro lugar, mas com muito potencial! 🌟",
+      "Você está evoluindo! 📈",
+      "Continue assim! 💫"
+    ],
+    "other": [
+      "Cada tentativa é um aprendizado! 📚",
+      "Você está no jogo, isso já é uma vitória! 🎯",
+      "Continue tentando, você vai chegar lá! 🌈",
+      "Sua participação faz toda a diferença! 🤝"
+    ]
+  }
+}
+

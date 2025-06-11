@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "nome": "Empatia",
+    "descricao": "Capacidade de compreender e compartilhar os sentimentos de outras pessoas, colocando-se no lugar do outro."
+  },
+  {
+    "id": 2,
+    "nome": "Autocontrole",
+    "descricao": "Habilidade de regular as próprias emoções, impulsos e comportamentos de forma consciente e adequada."
+  },
+  {
+    "id": 3,
+    "nome": "Comunicação Assertiva",
+    "descricao": "Capacidade de expressar pensamentos, sentimentos e necessidades de forma clara, respeitosa e direta."
+  },
+  {
+    "id": 4,
+    "nome": "Resiliência",
+    "descricao": "Habilidade de se recuperar de adversidades, adaptar-se a mudanças e superar desafios com força mental."
+  },
+  {
+    "id": 5,
+    "nome": "Colaboração",
+    "descricao": "Capacidade de trabalhar efetivamente com outros, compartilhando responsabilidades e buscando objetivos comuns."
+  },
+  {
+    "id": 6,
+    "nome": "Autoconhecimento",
+    "descricao": "Consciência sobre as próprias emoções, forças, fraquezas, valores e motivações pessoais."
+  },
+  {
+    "id": 7,
+    "nome": "Liderança",
+    "descricao": "Habilidade de inspirar, motivar e guiar outras pessoas em direção a objetivos compartilhados."
+  },
+  {
+    "id": 8,
+    "nome": "Resolução de Conflitos",
+    "descricao": "Capacidade de mediar e resolver disputas de forma pacífica e construtiva."
+  },
+  {
+    "id": 9,
+    "nome": "Pensamento Crítico",
+    "descricao": "Habilidade de analisar informações objetivamente e tomar decisões fundamentadas e racionais."
+  },
+  {
+    "id": 10,
+    "nome": "Adaptabilidade",
+    "descricao": "Capacidade de se ajustar a novas situações, mudanças e desafios com flexibilidade."
+  },
+  {
+    "id": 11,
+    "nome": "Responsabilidade",
+    "descricao": "Compromisso de assumir as consequências das próprias ações e cumprir com obrigações."
+  },
+  {
+    "id": 12,
+    "nome": "Criatividade",
+    "descricao": "Habilidade de gerar ideias originais e encontrar soluções inovadoras para problemas."
+  },
+  {
+    "id": 13,
+    "nome": "Tolerância à Frustração",
+    "descricao": "Capacidade de lidar com decepções, fracassos e situações adversas sem perder o equilíbrio emocional."
+  },
+  {
+    "id": 14,
+    "nome": "Escuta Ativa",
+    "descricao": "Habilidade de ouvir atentamente, compreender e responder adequadamente ao que outros estão comunicando."
+  },
+  {
+    "id": 15,
+    "nome": "Autoestima",
+    "descricao": "Valorização positiva de si mesmo, reconhecendo as próprias qualidades e aceitando limitações."
+  },
+  {
+    "id": 16,
+    "nome": "Gestão do Tempo",
+    "descricao": "Capacidade de organizar e priorizar atividades de forma eficiente para alcançar objetivos."
+  },
+  {
+    "id": 17,
+    "nome": "Coragem",
+    "descricao": "Força para enfrentar medos, desafios e situações difíceis, defendendo valores e princípios."
+  },
+  {
+    "id": 18,
+    "nome": "Paciência",
+    "descricao": "Habilidade de manter a calma e perseverar mesmo em situações que exigem espera ou são frustrantes."
+  },
+  {
+    "id": 19,
+    "nome": "Gratidão",
+    "descricao": "Capacidade de reconhecer e valorizar aspectos positivos da vida e das pessoas ao redor."
+  },
+  {
+    "id": 20,
+    "nome": "Tomada de Decisão",
+    "descricao": "Habilidade de avaliar opções, considerar consequências e fazer escolhas conscientes e bem fundamentadas."
+  }
+]
+

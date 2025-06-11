@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "titulo": "Conflito com Amigo",
+    "descricao": "Seu melhor amigo espalhou um segredo seu para outras pessoas. Você se sente traído e magoado. Como você lidaria com essa situação?"
+  },
+  {
+    "id": 2,
+    "titulo": "Pressão do Grupo",
+    "descricao": "Seus amigos estão pressionando você a fazer algo que você não se sente confortável em fazer. Como você reagiria?"
+  },
+  {
+    "id": 3,
+    "titulo": "Bullying na Escola",
+    "descricao": "Você presencia um colega sendo intimidado por outros estudantes. O que você faria nessa situação?"
+  },
+  {
+    "id": 4,
+    "titulo": "Ansiedade Antes de Prova",
+    "descricao": "Você tem uma prova importante amanhã e está se sentindo muito ansioso e nervoso. Como você lidaria com esses sentimentos?"
+  },
+  {
+    "id": 5,
+    "titulo": "Conflito Familiar",
+    "descricao": "Seus pais estão brigando constantemente e isso está afetando seu bem-estar emocional. Como você enfrentaria essa situação?"
+  },
+  {
+    "id": 6,
+    "titulo": "Rejeição Social",
+    "descricao": "Você não foi convidado para uma festa que todos os seus amigos foram. Como você lidaria com esse sentimento de exclusão?"
+  },
+  {
+    "id": 7,
+    "titulo": "Fracasso Acadêmico",
+    "descricao": "Você tirou uma nota muito baixa em uma matéria importante. Como você reagiria a essa decepção?"
+  },
+  {
+    "id": 8,
+    "titulo": "Mudança de Escola",
+    "descricao": "Sua família vai se mudar e você terá que trocar de escola, deixando todos os seus amigos para trás. Como você enfrentaria essa mudança?"
+  },
+  {
+    "id": 9,
+    "titulo": "Problema de Autoestima",
+    "descricao": "Você se sente inseguro sobre sua aparência e isso está afetando sua confiança. Como você trabalharia essa questão?"
+  },
+  {
+    "id": 10,
+    "titulo": "Conflito de Valores",
+    "descricao": "Seus amigos têm valores muito diferentes dos seus e isso está causando tensão no grupo. Como você lidaria com essa diferença?"
+  },
+  {
+    "id": 11,
+    "titulo": "Sobrecarga de Responsabilidades",
+    "descricao": "Você está sobrecarregado com estudos, atividades extracurriculares e responsabilidades em casa. Como você organizaria suas prioridades?"
+  },
+  {
+    "id": 12,
+    "titulo": "Ciúmes entre Amigos",
+    "descricao": "Você sente ciúmes porque seu melhor amigo está passando mais tempo com outras pessoas. Como você lidaria com esse sentimento?"
+  },
+  {
+    "id": 13,
+    "titulo": "Pressão para Performance",
+    "descricao": "Seus pais têm expectativas muito altas sobre seu desempenho acadêmico e isso está causando estresse. Como você abordaria essa situação?"
+  },
+  {
+    "id": 14,
+    "titulo": "Problema de Comunicação",
+    "descricao": "Você tem dificuldade para expressar seus sentimentos e isso está afetando seus relacionamentos. Como você melhoraria sua comunicação?"
+  },
+  {
+    "id": 15,
+    "titulo": "Perda de Ente Querido",
+    "descricao": "Alguém muito importante para você faleceu recentemente e você está lidando com o luto. Como você processaria essa perda?"
+  },
+  {
+    "id": 16,
+    "titulo": "Vício em Redes Sociais",
+    "descricao": "Você percebe que está passando tempo demais nas redes sociais e isso está afetando outras áreas da sua vida. Como você lidaria com isso?"
+  },
+  {
+    "id": 17,
+    "titulo": "Discriminação",
+    "descricao": "Você sofreu discriminação por causa de alguma característica sua (cor, religião, orientação sexual, etc.). Como você reagiria?"
+  },
+  {
+    "id": 18,
+    "titulo": "Decisão de Carreira",
+    "descricao": "Você está confuso sobre que carreira seguir e sente pressão para tomar uma decisão. Como você abordaria essa escolha importante?"
+  },
+  {
+    "id": 19,
+    "titulo": "Problema Financeiro Familiar",
+    "descricao": "Sua família está passando por dificuldades financeiras e isso está afetando o ambiente em casa. Como você lidaria com essa situação?"
+  },
+  {
+    "id": 20,
+    "titulo": "Relacionamento Tóxico",
+    "descricao": "Você está em um relacionamento (amizade ou namoro) que não está sendo saudável para você. Como você lidaria com essa situação?"
+  }
+]
+

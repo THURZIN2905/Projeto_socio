@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Habilidades Socioemocionais</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</head>
+<body>
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-heart"></i>
+                <h1>Habilidades Socioemocionais</h1>
+            </div>
+            <div class="loading-spinner"></div>
+            <p>Carregando o jogo...</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="main-container" class="main-container hidden">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span>Habilidades Socioemocionais</span>
+                </div>
+                <div class="header-controls">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="sound-toggle" class="sound-toggle">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <div class="welcome-hero">
+                    <h1 class="welcome-title">
+                        Bem-vindo ao Jogo de
+                        <span class="gradient-text">Habilidades Socioemocionais</span>
+                    </h1>
+                    <p class="welcome-subtitle">
+                        Desenvolva suas habilidades socioemocionais de forma divertida e colaborativa!
+                    </p>
+                </div>
+
+                <div class="welcome-actions">
+                    <button id="create-room-btn" class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Criar Sala
+                    </button>
+                    <button id="join-room-btn" class="btn btn-secondary">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Entrar em Sala
+                    </button>
+                </div>
+
+                <div class="welcome-features">
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Multiplayer</h3>
+                        <p>Jogue com amigos em tempo real</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <h3>Educativo</h3>
+                        <p>Desenvolva habilidades importantes</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Competitivo</h3>
+                        <p>Ranking e conquistas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player Setup Screen -->
+        <div id="player-setup-screen" class="screen">
+            <div class="setup-content">
+                <h2>Configure seu Perfil</h2>
+                
+                <div class="setup-form">
+                    <div class="form-group">
+                        <label for="player-name">Nome do Jogador</label>
+                        <input type="text" id="player-name" placeholder="Digite seu nome" maxlength="20">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Escolha seu Avatar</label>
+                        <div class="avatar-selection">
+                            <div class="avatar-option selected" data-avatar="1">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="2">
+                                <i class="fas fa-user-ninja"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="3">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="4">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="5">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="6">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="player-team">Time (Opcional)</label>
+                        <input type="text" id="player-team" placeholder="Nome do seu time" maxlength="15">
+                    </div>
+
+                    <div id="room-password-group" class="form-group hidden">
+                        <label for="room-password">Senha da Sala</label>
+                        <input type="text" id="room-password" placeholder="Digite a senha da sala" maxlength="6">
+                    </div>
+
+                    <div id="room-name-group" class="form-group hidden">
+                        <label for="room-name">Nome da Sala</label>
+                        <input type="text" id="room-name" placeholder="Digite o nome da sala" maxlength="30">
+                    </div>
+
+                    <div class="setup-actions">
+                        <button id="back-to-welcome" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i>
+                            Voltar
+                        </button>
+                        <button id="confirm-setup" class="btn btn-primary">
+                            <i class="fas fa-check"></i>
+                            Confirmar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Room Screen -->
+        <div id="game-room-screen" class="screen">
+            <div class="room-header">
+                <div class="room-info">
+                    <h2 id="room-name-display">Sala do Jogo</h2>
+                    <div class="room-details">
+                        <span id="room-password-display" class="room-password">Senha: ------</span>
+                        <span id="room-theme-display" class="room-theme">Tema: Escola</span>
+                    </div>
+                </div>
+                <div class="room-controls">
+                    <button id="change-theme-btn" class="btn btn-small">
+                        <i class="fas fa-palette"></i>
+                        Tema
+                    </button>
+                    <button id="leave-room-btn" class="btn btn-danger btn-small">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </button>
+                </div>
+            </div>
+
+            <div class="room-content">
+                <!-- Players Panel -->
+                <div class="players-panel">
+                    <h3>Jogadores <span id="player-count">0</span></h3>
+                    <div id="players-list" class="players-list"></div>
+                    
+                    <div class="admin-controls" id="admin-controls" style="display: none;">
+                        <button id="start-round-btn" class="btn btn-success">
+                            <i class="fas fa-play"></i>
+                            Iniciar Rodada
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Game Area -->
+                <div class="game-area">
+                    <!-- Waiting State -->
+                    <div id="waiting-state" class="game-state active">
+                        <div class="waiting-content">
+                            <i class="fas fa-clock"></i>
+                            <h3>Aguardando início da rodada...</h3>
+                            <p>O administrador da sala iniciará o jogo em breve.</p>
+                        </div>
+                    </div>
+
+                    <!-- Round State -->
+                    <div id="round-state" class="game-state">
+                        <div class="round-header">
+                            <div class="round-info">
+                                <span id="round-number">Rodada 1</span>
+                                <div id="round-timer" class="round-timer">
+                                    <i class="fas fa-clock"></i>
+                                    <span id="timer-display">5:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="situation-card">
+                            <h3>Situação</h3>
+                            <div id="situation-content" class="situation-content">
+                                <!-- Situação será carregada aqui -->
+                            </div>
+                        </div>
+
+                        <div class="skills-selection">
+                            <h3>Escolha a melhor habilidade para resolver esta situação:</h3>
+                            <div id="skills-grid" class="skills-grid">
+                                <!-- Cartas de habilidades serão carregadas aqui -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results State -->
+                    <div id="results-state" class="game-state">
+                        <div class="results-content">
+                            <h3>Resultados da Rodada</h3>
+                            <div id="results-list" class="results-list">
+                                <!-- Resultados serão carregados aqui -->
+                            </div>
+                            <div class="results-actions">
+                                <button id="next-round-btn" class="btn btn-primary">
+                                    <i class="fas fa-forward"></i>
+                                    Próxima Rodada
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Panel -->
+                <div class="chat-panel">
+                    <h3>Chat da Sala</h3>
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input" placeholder="Digite sua mensagem..." maxlength="200">
+                        <button id="send-message-btn" class="btn btn-primary btn-small">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Theme Selection Modal -->
+        <div id="theme-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Escolher Tema da Sala</h3>
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="theme-options">
+                        <div class="theme-option" data-theme="escola">
+                            <i class="fas fa-school"></i>
+                            <span>Escola</span>
+                        </div>
+                        <div class="theme-option" data-theme="espaco">
+                            <i class="fas fa-rocket"></i>
+                            <span>Espaço</span>
+                        </div>
+                        <div class="theme-option" data-theme="tiktok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </div>
+                        <div class="theme-option" data-theme="futebol">
+                            <i class="fas fa-futbol"></i>
+                            <span>Futebol</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Modal -->
+        <div id="achievements-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Nova Conquista!</h3>
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="achievement-content" class="achievement-content">
+                        <!-- Conquista será carregada aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="background-music" loop>
+        <source src="assets/sounds/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="notification-sound">
+        <source src="assets/sounds/notification.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="success-sound">
+        <source src="assets/sounds/success.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/socket-client.js"></script>
+    <script src="js/game.js"></script>
+    
+    <script>
+        // Initialize VLibras
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
+
